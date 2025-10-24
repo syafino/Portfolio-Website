@@ -10,7 +10,7 @@ const ServiceCard = ({ index, title, icon }) => (
   <Tilt className="xs:w-[250px] w-full">
     <motion.div
       variants={fadeIn('right', 'spring', index * 0.5, 0.75)}
-      className="w-full green-pink-gradient p-[1px] rounded-[20px] shadow-card"
+      className="w-full orange-gold-gradient p-[1px] rounded-[20px] shadow-card"
     >
       <div
         options={{
@@ -40,8 +40,8 @@ const About = () => {
         variants={fadeIn('', '', 0.1, 1)}
         className="mt-4 text-secondary text-[17px] max-w-3xl leading-[30px]"
       >
-        I am a Computer Science student at SRM University and multilingual speaker with a passion
-        for ethical hacking, artificial intelligence, and neural language processing. I am looking
+        I am a Statistics Student with a Computer Science Minor at The University of Illinois at Urbana Champaign (UIUC) and multilingual speaker with a passion
+        for artificial intelligence, and neural language processing. I am looking
         to join a company that values innovation, collaboration, and continuous learning and am
         confident that my enthusiasm and drive will help me succeed in any role that leverages my
         passion for technology.

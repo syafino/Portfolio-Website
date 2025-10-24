@@ -4,21 +4,21 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        primary: '#050816',
-        secondary: '#aaa6c3',
-        tertiary: '#151030',
-        'black-100': '#100d25',
-        'black-200': '#090325',
-        'white-100': '#f3f3f3',
+        primary: '#1a0f0a',
+        secondary: '#fed7aa',
+        tertiary: '#2d1810',
+        'black-100': '#3d2817',
+        'black-200': '#2d1810',
+        'white-100': '#fef3e2',
       },
       boxShadow: {
-        card: '0 35px 120px -15px #211e35',
+        card: '0 35px 120px -15px #ea580c',
       },
       screens: {
         xs: '450px',
       },
       backgroundImage: {
-        'hero-pattern': `url(/herobg.png)`,
+        'hero-pattern': "url('/bgblackhole.png')",
       },
     },
   },

@@ -135,11 +135,25 @@ const Contact = () => {
 
           <button
             type="submit"
-            className="bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary"
+            disabled={loading}
+            className={`orange-gold-gradient py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md transition-all duration-300 transform hover:scale-105 ${
+              loading ? 'opacity-50 cursor-not-allowed' : 'hover:shadow-lg'
+            }`}
           >
-            {loading ? "Sending..." : "Send"}
+            {loading ? (
+              <div className="flex items-center">
+                <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white mr-2"></div>
+                Sending...
+              </div>
+            ) : (
+              "Send Message"
+            )}
           </button>
-          {confirmation && <p className="text-green-500">{confirmation}</p>}
+          {confirmation && (
+            <div className={`p-4 rounded-lg ${confirmation.includes('Thank you') ? 'bg-green-100 text-green-700 border border-green-300' : 'bg-red-100 text-red-700 border border-red-300'}`}>
+              {confirmation}
+            </div>
+          )}
         </form>
       </motion.div>
 

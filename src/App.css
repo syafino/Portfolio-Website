@@ -14,7 +14,7 @@
 
 .logo:hover,
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #fed7aaaa);
 }
 
 @keyframes logo-spin {
@@ -41,7 +41,16 @@
 }
 
 .resume-button {
-  border: 2px solid blue;
+  border: 2px solid #fed7aa;
   border-radius: 4px;
   padding: 6px 12px;
+  transition: all 0.3s ease;
+  color: #fed7aa;
+}
+
+.resume-button:hover {
+  background: linear-gradient(90deg, #fed7aa, #fde68a);
+  border-color: #fde68a;
+  color: #1a1a1a;
+  transform: translateY(-2px);
 }

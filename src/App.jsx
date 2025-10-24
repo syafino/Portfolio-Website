@@ -11,7 +11,39 @@ const App = () => {
       }}
     >
       <div className="relative z-0 bg-primary">
-        <div className="bg-hero-pattern bg-cover bg-no-repeat bg-center">
+        <div 
+          className="bg-cover bg-no-repeat bg-center bg-fixed min-h-screen hero-background-override"
+          style={{
+            backgroundImage: `url('/bgblackhole.png')`,
+            backgroundAttachment: 'fixed',
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+            position: 'relative',
+            zIndex: 1,
+          }}
+        >
+          {/* Cosmic particles */}
+          <div className="cosmic-particles">
+            <div className="particle large"></div>
+            <div className="particle"></div>
+            <div className="particle small"></div>
+            <div className="particle"></div>
+            <div className="particle large"></div>
+            <div className="particle small"></div>
+            <div className="particle"></div>
+            <div className="particle large"></div>
+            <div className="particle small"></div>
+            <div className="particle"></div>
+            <div className="particle large"></div>
+            <div className="particle small"></div>
+          </div>
+          
+          {/* Energy waves */}
+          <div className="energy-wave"></div>
+          <div className="energy-wave"></div>
+          <div className="energy-wave"></div>
+          
           <Navbar />
           <Hero />
         </div>
