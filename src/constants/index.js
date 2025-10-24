@@ -20,6 +20,9 @@ import {
   mathwork,
   CompileVortex,
   eduskill,
+  uiuc,
+  acm,
+  cimb,
 } from "../assets";
 
 export const navLinks = [
@@ -59,8 +62,8 @@ export const experiences = [
   {
     title: "Software Engineer & Automation Research Assistant",
     company_name: "Garg Research Group | University of Illinois at Urbana-Champaign",
-    icon: eduskill, // We'll use existing icon for now
-    iconBg: "#1f2937",
+    icon: uiuc,
+    iconBg: "#13294b", // UIUC Navy Blue
     date: "Sep 2025 – Current",
     points: [
       "Developed GUI and automation software for a device that accelerates cement R3 reactivity test time from 7 days to 30 minutes",
@@ -72,8 +75,8 @@ export const experiences = [
   {
     title: "Project Backend Lead",
     company_name: "Association for Computing Machinery (ACM) | SIG Mobile",
-    icon: mathwork, // We'll use existing icon for now
-    iconBg: "#1e40af",
+    icon: acm,
+    iconBg: "#ffffff", // White background for ACM logo
     date: "Aug 2025 - Current",
     points: [
       "Lead backend development for an 8-member team, mentoring members on Flutter, Dart, Android Studio, and widget-based UI development",
@@ -85,8 +88,8 @@ export const experiences = [
   {
     title: "Data Analysis & Finance Internship",
     company_name: "CIMB Niaga Bank",
-    icon: edunet, // We'll use existing icon for now
-    iconBg: "#dc2626",
+    icon: cimb,
+    iconBg: "#ffffff", // White background for CIMB logo
     date: "Jul 2022 - Aug 2022",
     points: [
       "Analyzed large CSV datasets, identified financial trends, and created data visualizations using Excel",

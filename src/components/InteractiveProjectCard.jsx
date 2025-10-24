@@ -18,14 +18,12 @@ const InteractiveProjectCard = ({
   const cardVariants = {
     rest: { 
       scale: 1,
-      rotateY: 0,
     },
     hover: { 
-      scale: 1.05,
-      rotateY: isFlipped ? 180 : 0,
+      scale: 1.02,
       transition: {
-        duration: 0.6,
-        ease: "easeInOut"
+        duration: 0.3,
+        ease: "easeOut"
       }
     }
   };
@@ -55,11 +53,11 @@ const InteractiveProjectCard = ({
           scale: 1,
           speed: 450,
         }}
-        className="bg-tertiary p-5 rounded-2xl sm:w-[360px] w-full h-[400px] relative preserve-3d"
+        className="bg-tertiary/20 backdrop-blur-md p-5 rounded-2xl sm:w-[360px] w-full h-[400px] relative preserve-3d border border-white/10 shadow-xl glass-card"
       >
-        {/* Glowing border effect */}
-        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 transition-opacity duration-300 ${isHovered ? 'opacity-75' : 'opacity-0'}`} style={{ padding: '2px' }}>
-          <div className="bg-tertiary rounded-2xl w-full h-full" />
+        {/* Enhanced glowing border effect */}
+        <div className={`absolute inset-0 rounded-2xl bg-gradient-to-r from-pink-500/30 via-purple-500/30 to-blue-500/30 transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`} style={{ padding: '1px' }}>
+          <div className="bg-transparent rounded-2xl w-full h-full backdrop-blur-sm" />
         </div>
 
         {/* Front Face */}
@@ -97,7 +95,7 @@ const InteractiveProjectCard = ({
                     className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
                   >
                     <img
-                      src="/github.png"
+                      src={github}
                       alt="source code"
                       className="w-1/2 h-1/2 object-contain"
                     />
@@ -105,22 +103,17 @@ const InteractiveProjectCard = ({
                 </div>
               </div>
 
-              <div className="mt-5">
-                <h3 className="text-white font-bold text-[24px]">{name}</h3>
-                <p className="mt-2 text-secondary text-[14px] line-clamp-4">
+              <div className="mt-5 overflow-hidden">
+                <h3 className="text-white font-bold text-xl mb-2 break-words">{name}</h3>
+                <p className="text-secondary text-sm leading-relaxed break-words overflow-hidden" 
+                   style={{
+                     display: '-webkit-box',
+                     WebkitLineClamp: 3,
+                     WebkitBoxOrient: 'vertical',
+                     overflow: 'hidden'
+                   }}>
                   {description}
                 </p>
-              </div>
-
-              <div className="mt-4 flex flex-wrap gap-2">
-                {tags.slice(0, 3).map((tag) => (
-                  <p
-                    key={`${name}-${tag.name}`}
-                    className={`text-[14px] ${tag.color}`}
-                  >
-                    #{tag.name}
-                  </p>
-                ))}
               </div>
             </motion.div>
           )}
@@ -130,56 +123,72 @@ const InteractiveProjectCard = ({
         <AnimatePresence>
           {isFlipped && (
             <motion.div
-              className="absolute inset-5 z-10 bg-gradient-to-br from-purple-900/50 to-blue-900/50 backdrop-blur-sm rounded-2xl p-6"
+              className="absolute inset-5 z-10 bg-gradient-to-br from-purple-900/30 to-blue-900/30 backdrop-blur-lg rounded-2xl p-6 border border-white/20 shadow-2xl glass-card"
               variants={backVariants}
               initial="hidden"
               animate={isFlipped ? "visible" : "hidden"}
               exit="hidden"
               transition={{ duration: 0.6 }}
-              style={{ transform: 'rotateY(180deg)' }}
             >
-              <div className="h-full flex flex-col justify-between">
-                <div>
-                  <button
-                    onClick={() => setIsFlipped(false)}
-                    className="float-right text-white hover:text-purple-300 transition-colors mb-4"
-                  >
-                    ✕
-                  </button>
+              <div className="h-full flex flex-col justify-between overflow-hidden">
+                <div className="overflow-hidden">
+                  <div className="flex justify-between items-start mb-4">
+                    <h3 className="text-white font-bold text-lg break-words flex-1 mr-4">{name}</h3>
+                    <button
+                      onClick={() => setIsFlipped(false)}
+                      className="text-white hover:text-purple-300 transition-colors flex-shrink-0"
+                    >
+                      ✕
+                    </button>
+                  </div>
                   
-                  <h3 className="text-white font-bold text-[20px] mb-4">{name}</h3>
-                  
-                  <p className="text-gray-300 text-[14px] mb-6">
+                  <p className="text-gray-300 text-sm mb-4 leading-relaxed break-words overflow-hidden"
+                     style={{
+                       display: '-webkit-box',
+                       WebkitLineClamp: 6,
+                       WebkitBoxOrient: 'vertical',
+                       overflow: 'hidden'
+                     }}>
                     {description}
                   </p>
 
-                  <div className="flex flex-wrap gap-2 mb-6">
-                    {tags.map((tag) => (
-                      <span
-                        key={`${name}-back-${tag.name}`}
-                        className={`text-[12px] px-3 py-1 rounded-full bg-black/30 ${tag.color}`}
-                      >
-                        {tag.name}
-                      </span>
-                    ))}
+                  <div className="mb-4 w-full px-2 overflow-hidden">
+                    <div className="flex flex-wrap gap-2 max-w-full">
+                      {tags.map((tag) => (
+                        <span
+                          key={`${name}-back-${tag.name}`}
+                          className={`text-xs px-2 py-1 rounded-full bg-black/30 border border-gray-600/30 ${tag.color} inline-block`}
+                          style={{
+                            maxWidth: '75px',
+                            whiteSpace: 'nowrap',
+                            overflow: 'hidden',
+                            textOverflow: 'ellipsis'
+                          }}
+                          title={tag.name}
+                        >
+                          {tag.name}
+                        </span>
+                      ))}
+                    </div>
                   </div>
                 </div>
 
-                <div className="space-y-3">
+                {/* Action Buttons - Fixed at bottom */}
+                <div className="space-y-3 flex-shrink-0 mt-auto">
                   {live_link && (
                     <button
                       onClick={() => window.open(live_link, "_blank")}
-                      className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+                      className="w-full bg-gradient-to-r from-blue-500 to-purple-500 hover:from-blue-600 hover:to-purple-600 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] text-sm"
                     >
-                      View Live Demo
+                      🚀 View Live Demo
                     </button>
                   )}
                   
                   <button
                     onClick={() => window.open(source_code_link, "_blank")}
-                    className="w-full bg-gray-700 hover:bg-gray-600 text-white font-bold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-105"
+                    className="w-full bg-gray-700/80 hover:bg-gray-600/80 text-white font-semibold py-2 px-4 rounded-lg transition-all duration-300 transform hover:scale-[1.02] border border-gray-600/30 text-sm"
                   >
-                    View Source Code
+                    📂 View Source Code
                   </button>
                 </div>
               </div>

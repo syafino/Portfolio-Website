@@ -2,6 +2,10 @@
 import mathwork from "./company/mathwork.png";
 import edunet from "./company/edunet.png";
 import eduskill from "./company/eduskill.png";
+// New company logos (add these files to /src/assets/company/)
+import uiuc from "./company/uiuc.png";
+import acm from "./company/acm.png";
+import cimb from "./company/cimb.png";
 
 // Import tech stack images
 import python from "./tech-stack/python.png";
@@ -57,4 +61,7 @@ export {
   menu,
   close,
   eduskill,
+  uiuc,
+  acm,
+  cimb,
 };
