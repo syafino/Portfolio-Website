@@ -57,38 +57,42 @@ export const technologies = [
 
 export const experiences = [
   {
-    title: "AI/ML Intern",
-    company_name: "EduSkill Foundation | AWS Academy | AICTE",
-    icon: eduskill,
-    iconBg: "#3d2817",
-    date: "Sep 2023 - Nov 2023",
+    title: "Software Engineer & Automation Research Assistant",
+    company_name: "Garg Research Group | University of Illinois at Urbana-Champaign",
+    icon: eduskill, // We'll use existing icon for now
+    iconBg: "#1f2937",
+    date: "Sep 2025 – Current",
     points: [
-      "Acquired hands-on knowledge of AWS Cloud Foundation, delving into cloud infrastructure, services, and deployment.",
-      "also gaining a solid foundation in Machine Learning, covering topics like algorithms, data analysis, and model building.",
+      "Developed GUI and automation software for a device that accelerates cement R3 reactivity test time from 7 days to 30 minutes",
+      "Integrated Raspberry Pi hardware with real-time data acquisition and visualization using React.js, Node.js, PostgreSQL, Python, Linux and MQTT",
+      "Integrated WiFi connectivity from a distance by creating access point - connecting to hotspot opens a flash web page to input WiFi credentials which Raspberry Pi then connects to",
+      "Automated camera capturing of diluted solution, cropping image to cuvette, and observing most significant color with OpenCV - calculations on RGB values are automated and filed in JSON for GUI display",
     ],
   },
   {
-    title: "Mathwork Ai Virtual Intern",
-    company_name: "Mathwork | AICTE",
-    icon: mathwork,
-    iconBg: "#3d2817",
-    date: "May 2023 - Sep 2023",
+    title: "Project Backend Lead",
+    company_name: "Association for Computing Machinery (ACM) | SIG Mobile",
+    icon: mathwork, // We'll use existing icon for now
+    iconBg: "#1e40af",
+    date: "Aug 2025 - Current",
     points: [
-      "Completed virtual internship, gaining a strong foundation in MATLAB, including data analysis and processing.",
-      "Acquired practical skills in image and signal processing, including segmentation, batch processing, and spectral analysis.",
-      "Developed expertise in machine learning models for clustering, classification, and regression, and customized deep learning techniques for image classification.",
+      "Lead backend development for an 8-member team, mentoring members on Flutter, Dart, Android Studio, and widget-based UI development",
+      "Designed and implemented relational database architecture for student services app at UIUC using PostgreSQL",
+      "Constantly monitoring git issues and pull requests, mentoring team on best practices",
+      "Mentored creation of UML/ER Diagram + system architecture design, taught RESTful API development including POST, GET, UPDATE operations",
     ],
   },
   {
-    title: "Artificial Intelligence Intern",
-    company_name: "Edunet Foundation | IBM SkillsBuild | AICTE",
-    icon: edunet,
-    iconBg: "#3d2817",
-    date: "June 2023 - July 2023",
+    title: "Data Analysis & Finance Internship",
+    company_name: "CIMB Niaga Bank",
+    icon: edunet, // We'll use existing icon for now
+    iconBg: "#dc2626",
+    date: "Jul 2022 - Aug 2022",
     points: [
-      "Engineered a comprehensive Mental Health Fitness Tracker ML model utilizing Python and scikit-learn.",
-      "Maximized the model's performance by refining model parameters and employing ensemble methods, yielding an outstanding accuracy percentage of 98.50%.",
-      "Leveraged 12 regression algorithms to attain precise outcomes in analyzing and predicting mental fitness levels across 150+ countries.",
+      "Analyzed large CSV datasets, identified financial trends, and created data visualizations using Excel",
+      "Monitored market news to inform data-driven predictions and investment insights",
+      "Analyzed market data and news to make stock predictions, which were then evaluated by the team for implementation decisions",
+      "Gained hands-on experience in financial data analysis and market trend identification in Jakarta, Indonesia",
     ],
   },
 ];

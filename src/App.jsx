@@ -1,6 +1,6 @@
 import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
-import { About, Contact, Experience, Hero, Navbar, StarsCanvas, Tech, Works } from './components';
+import { About, Contact, Experience, Hero, Navbar, StarsCanvas, Tech, Works, ParticleSystem } from './components';
 
 const App = () => {
   return (
@@ -11,6 +11,9 @@ const App = () => {
       }}
     >
       <div className="relative z-0 bg-primary">
+        {/* Interactive particle cursor follower */}
+        <ParticleSystem />
+        
         <div 
           className="bg-cover bg-no-repeat bg-center bg-fixed min-h-screen hero-background-override"
           style={{
@@ -20,7 +23,7 @@ const App = () => {
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
             position: 'relative',
-            zIndex: 1,
+            zIndex: 2,
           }}
         >
           {/* Cosmic particles */}

@@ -2,6 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { styles } from "../styles";
 import { ComputersCanvas } from "./canvas";
+import InteractiveButton from "./InteractiveButton";
 import Typewriter from "typewriter-effect";
 
 const Hero = () => {
@@ -31,33 +32,38 @@ const Hero = () => {
             />
           </p>
           
-          {/* Call-to-Action Buttons with better contrast and positioning */}
-          <div className="flex flex-col gap-4 mt-12 relative z-30">
+          {/* Interactive Call-to-Action Buttons */}
+          <motion.div 
+            className="flex flex-col gap-4 mt-12 relative z-30"
+            initial={{ opacity: 0, y: 50 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.8, duration: 0.6 }}
+          >
             <div className="flex flex-wrap gap-4">
-              <a 
+              <InteractiveButton 
                 href="#contact"
-                className="bg-black bg-opacity-80 hover:bg-opacity-90 text-orange-300 border border-orange-300 hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg backdrop-blur-sm"
+                variant="primary"
               >
                 Let's Work Together
-              </a>
-              <a 
+              </InteractiveButton>
+              
+              <InteractiveButton 
                 href="#work"
-                className="bg-gray-900 bg-opacity-80 hover:bg-opacity-90 border-2 border-orange-400 text-orange-300 hover:bg-orange-400 hover:text-black font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 backdrop-blur-sm"
+                variant="secondary"
               >
                 View My Work
-              </a>
+              </InteractiveButton>
             </div>
             <div>
-              <a 
+              <InteractiveButton 
                 href="/Resume.pdf"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="bg-orange-600 bg-opacity-90 hover:bg-opacity-100 border-2 border-orange-500 text-white hover:text-white font-bold py-3 px-6 rounded-lg transition-all duration-300 transform hover:scale-105 shadow-lg inline-block"
+                variant="accent"
+                onClick={() => window.open('/Resume.pdf', '_blank')}
               >
                 Download Resume
-              </a>
+              </InteractiveButton>
             </div>
-          </div>
+          </motion.div>
         </div>
       </div>
 

@@ -523,3 +523,87 @@ p {
 .confirmation {
   color: #00ff00;
 }
+
+/* 3D Effects and Interactive Elements */
+.perspective-1000 {
+  perspective: 1000px;
+}
+
+.preserve-3d {
+  transform-style: preserve-3d;
+}
+
+.translate-z-2 {
+  transform: translateZ(2px);
+}
+
+.translate-z-neg-2 {
+  transform: translateZ(-2px);
+}
+
+/* Interactive button hover effects */
+.interactive-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.interactive-button:hover {
+  transform: translateY(-2px) rotateX(-5deg) rotateY(5deg);
+}
+
+/* Particle trail effects */
+.particle-trail {
+  position: fixed;
+  pointer-events: none;
+  border-radius: 50%;
+  mix-blend-mode: screen;
+  z-index: 9999;
+}
+
+/* Smooth animations for all interactive elements */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+.smooth-animation {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a0f0a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(to bottom, #fed7aa, #fde68a);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(to bottom, #fde68a, #fed7aa);
+}
+
+/* Loading states */
+.loading-shimmer {
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(254, 215, 170, 0.1),
+    transparent
+  );
+  animation: shimmer 2s infinite;
+}
+
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
