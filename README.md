@@ -1,6 +1,6 @@
 <div align="center">
 
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=320&section=header&text=Portfolio%20Website%0ATemplate&fontSize=70&animation=fadeIn&fontAlignY=45)
+![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Portfolio%20Website%0ATemplate&fontSize=70&animation=fadeIn&fontAlignY=40)
 
 
 <p align="center">
