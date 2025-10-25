@@ -1,6 +1,7 @@
 <div align="center">
 
-![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=200&section=header&text=Portfolio%20Website%0ATemplate&fontSize=80&animation=fadeIn&fontAlignY=35)
+![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=320&section=header&text=Portfolio%20Website%0ATemplate&fontSize=70&animation=fadeIn&fontAlignY=45)
+
 
 <p align="center">
   <a href="#features">Features</a> •
