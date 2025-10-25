@@ -11,8 +11,8 @@ import {
   nodejs,
   git,
   edunet,
-  weatherpedia,
-  termpw,
+  webgames,
+  pokesight,
   payloadmaster,
   threejs,
   mhft,
@@ -102,29 +102,33 @@ export const experiences = [
 
 export const projects = [
   {
-    name: "WeatherPedia",
+    name: "WebGames: Checkers",
     description:
-      "Web-based platform that allows users to access weather information for their location by entering it in the search field",
+      "An interactive, browser-based Checkers game designed for strategic two-player gameplay. Built with C++, HTML, CSS, JavaScript, and AJAX, hosted on Linux servers with CGI. Optimized for desktop browsing with near-instant move execution and clean user interface. Used C++ to challenge understanding of Object Oriented Programming (OOP). Awarded Scholarship for this project.",
     tags: [
-      { name: "Javascript", color: "blue-text-gradient" },
+      { name: "C++", color: "blue-text-gradient" },
       { name: "HTML", color: "gold-text-gradient" },
-      { name: "bootstrap 5.3.0", color: "pink-text-gradient" },
-      { name: "Weather API by API Ninjas", color: "yellow-text-gradient" },
+      { name: "JavaScript", color: "pink-text-gradient" },
+      { name: "CSS", color: "yellow-text-gradient" },
+      { name: "Linux", color: "green-text-gradient" },
+      { name: "AJAX", color: "purple-text-gradient" },
     ],
-    image: weatherpedia,
-    source_code_link: "https://github.com/lohitkolluri/WeatherPedia",
+    image: webgames,
+    source_code_link: "https://github.com/syafino/Checkers-with-C-HTML-little-JS",
   },
   {
-    name: "Terminal Like Portfolio Website",
+    name: "PokéSight: Smart Pokémon Go Map",
     description:
-      "A terminal themed portfolio website that allows users to type into the terminal and use commands like a real terminal.",
+      "Data-driven web application for strategic Pokémon Go location mapping. Features filtering by type, rarity, and stats using Kaggle datasets with CRUD operations and PostgreSQL integration.",
     tags: [
-      { name: "HTML", color: "blue-text-gradient" },
-      { name: "css", color: "gold-text-gradient" },
-      { name: "Javascript", color: "pink-text-gradient" },
+      { name: "Python", color: "blue-text-gradient" },
+      { name: "FastAPI", color: "gold-text-gradient" },
+      { name: "Next.js", color: "pink-text-gradient" },
+      { name: "PostgreSQL", color: "yellow-text-gradient" },
+      { name: "GCP", color: "green-text-gradient" },
     ],
-    image: termpw,
-    source_code_link: "https://github.com/lohitkolluri/lohitkolluri.github.io",
+    image: pokesight,
+    source_code_link: "https://github.com/syafino/PokeSight-Smart-Pokemon-Go-Map",
   },
   {
     name: "Mental Health Fitness Tracker",

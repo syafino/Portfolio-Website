@@ -64,7 +64,7 @@ const InteractiveProjectCard = ({
         <AnimatePresence>
           {!isFlipped && (
             <motion.div
-              className="absolute inset-5 z-10"
+              className="absolute inset-6 z-10"
               variants={frontVariants}
               initial="visible"
               animate={isFlipped ? "hidden" : "visible"}
@@ -103,9 +103,9 @@ const InteractiveProjectCard = ({
                 </div>
               </div>
 
-              <div className="mt-5 overflow-hidden">
+              <div className="mt-4 overflow-hidden">
                 <h3 className="text-white font-bold text-xl mb-2 break-words">{name}</h3>
-                <p className="text-secondary text-sm leading-relaxed break-words overflow-hidden" 
+                <p className="text-secondary text-sm leading-[1.3] break-words overflow-hidden" 
                    style={{
                      display: '-webkit-box',
                      WebkitLineClamp: 3,
@@ -152,14 +152,14 @@ const InteractiveProjectCard = ({
                     {description}
                   </p>
 
-                  <div className="mb-4 w-full px-2 overflow-hidden">
-                    <div className="flex flex-wrap gap-2 max-w-full">
-                      {tags.map((tag) => (
+                  <div className="mb-2 w-full px-1 overflow-hidden">
+                    <div className="flex flex-wrap gap-1 max-w-full">
+                      {tags.slice(0, 4).map((tag) => (
                         <span
                           key={`${name}-back-${tag.name}`}
                           className={`text-xs px-2 py-1 rounded-full bg-black/30 border border-gray-600/30 ${tag.color} inline-block`}
                           style={{
-                            maxWidth: '75px',
+                            maxWidth: '70px',
                             whiteSpace: 'nowrap',
                             overflow: 'hidden',
                             textOverflow: 'ellipsis'
@@ -169,6 +169,11 @@ const InteractiveProjectCard = ({
                           {tag.name}
                         </span>
                       ))}
+                      {tags.length > 4 && (
+                        <span className="text-xs px-2 py-1 rounded-full bg-black/30 border border-gray-600/30 text-gray-400 flex-shrink-0">
+                          +{tags.length - 4}
+                        </span>
+                      )}
                     </div>
                   </div>
                 </div>
