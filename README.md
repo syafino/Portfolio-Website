@@ -45,16 +45,12 @@ mindmap
 
 </div>
 
-## 🚀 Demo
-
-Experience the live portfolio at [https://portfolio-lohit.vercel.app](https://portfolio-lohit.vercel.app)
-
 ## 🛠️ Installation
 
 1️⃣ Clone the repository:
 
 ```bash
-git clone https://github.com/lohitkolluri/Portfolio-Website
+git clone https://github.com/syafino/Portfolio-Website
 ```
 
 2️⃣ Navigate to project directory:
@@ -131,6 +127,7 @@ npm run dev
 <div align="center">
 
 MIT License © [Lohit Kolluri](LICENSE)
+Additional modifications Copyright (c) 2025 Syafino Yunalfian
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
 
