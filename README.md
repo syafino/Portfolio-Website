@@ -127,6 +127,7 @@ npm run dev
 <div align="center">
 
 MIT License © [Lohit Kolluri](LICENSE)
+
 Additional modifications Copyright (c) 2025 [Syafino Yunalfian](LICENSE)
 
 <img src="https://capsule-render.vercel.app/api?type=waving&color=gradient&height=100&section=footer" width="100%"/>
