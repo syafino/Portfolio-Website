@@ -2,6 +2,7 @@
 
 ![Banner](https://capsule-render.vercel.app/api?type=waving&color=gradient&height=300&section=header&text=Portfolio%20Website%0ATemplate&fontSize=70&animation=fadeIn&fontAlignY=40)
 
+## **PREVIEW: [https://syafino.github.io/Portfolio-Website/](https://syafino.github.io/Portfolio-Website/)**
 
 <p align="center">
   <a href="#features">Features</a> •
